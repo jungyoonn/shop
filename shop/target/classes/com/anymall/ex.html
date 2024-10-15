@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset='utf-8'>
+        <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+        <title>Page Title</title>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <style>
+            @font-face {
+                font-family: 오버워치;
+                src: url('font/of.woff');
+            }
+            body {margin: 0; font-family: 오버워치}
+            a { text-decoration: none; color: #222;}
+            header, footer {background-color: rgb(231, 231, 209); padding: 16px; text-align: center;}
+            main {width: 1280px; margin: 0 auto; min-height: calc(100vh - 310px);}
+            #gnb {text-align: center;}
+            #gnb ul {padding: 0;}
+            #gnb li{display: inline; margin: 0 20px;}
+            #gnb a:hover {text-decoration: underline;}
+            .shadow {
+                font-size: 1.7em;
+                text-shadow: 4px 4px rgba(201, 157, 91, 0.6);
+            }
+        </style>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                var dogCnt = 0;
+                const dog = document.getElementById('dog');
+                dog.addEventListener("click", function() {
+                    if(dogCnt == 1) {
+                        document.getElementById("dogs").style.display = 'none';
+                        dogCnt = 0;
+                        return;
+                    }
+                    dogCnt++;
+                    dog.style.backgroundColor = "rgb(231, 231, 209)";
+                    document.getElementById('dogs').style.display = 'block';
+                    cat.style.backgroundColor = "white";
+                    document.getElementById("cats").style.display = "none";
+                });
+
+                // dog.addEventListener("mouseout", function() {
+                //     dog.style.backgroundColor = "white";
+                //     document.getElementById('dogs').style.display = 'none';
+                // });
+
+                var catCnt = 0;
+                const cat = document.getElementById('cat');
+                cat.addEventListener("click", function() {
+                    if(catCnt == 1) {
+                        document.getElementById("cats").style.display = 'none';
+                        catCnt = 0;
+                        return;
+                    }
+                    catCnt++;
+                    cat.style.backgroundColor = "rgb(231, 231, 209)";
+                    document.getElementById("cats").style.display = 'block';
+                    dog.style.backgroundColor = "white";
+                    document.getElementById('dogs').style.display = 'none';
+                });
+
+                // cat.addEventListener("mouseout", function() {
+                //     cat.style.backgroundColor = "white";
+                //     document.getElementById("cats").style.display = "none";
+                // });
+            });
+        </script>
+    </head>
+    <body>
+        <div id="wrap">
+            <header class="shadow">
+                <h1>ANYMALL</h1>
+                <h5>Animal의 Anymall, 우리에게 필요한 모든 것</h5>
+            </header>
+            <main>
+                <nav id="gnb">
+                    <ul>
+                        <li id="dog"><a href="#">강아지</a></li>
+                        <li id="cat"><a href="#">고양이</a></li>
+                        <li id="etc"><a href="#">기타 용품</a></li>
+                    </ul>
+                    <ul id="dogs" style="display: none;">
+                        <li><a href="#">사료</a></li>
+                        <li><a href="#">간식</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">장난감</a></li>
+                        <li><a href="#">산책</a></li>
+                        <li><a href="#">의류</a></li>
+                        <li><a href="#">목욕</a></li>
+                    </ul>
+                    <ul id="cats" style="display: none;">
+                        <li><a href="#">사료</a></li>
+                        <li><a href="#">간식</a></li>
+                        <li><a href="#">음료</a></li>
+                        <li><a href="#">장난감</a></li>
+                        <li><a href="#">캣타워/캣휠</a></li>
+                        <li><a href="#">목욕</a></li>
+                        <li><a href="#">모래</a></li>
+                    </ul>
+                </nav>
+                <section>
+                    <h3>본문 제목</h3>
+                    <img src="https://placehold.co/600x100" alt="img placehold">
+                    <article>
+                        <p>본문 글귀</p>
+                        <p>본문 글귀</p>
+                        <p>본문 글귀</p>
+                    </article>
+                </section>
+            </main>
+            <footer>
+                <p>copyright &copy; all rights reserved</p>
+                <address>
+                    <p>사업자 등록 번호</p>
+                </address>
+            </footer>
+        </div>
+    </body>
+</html>
