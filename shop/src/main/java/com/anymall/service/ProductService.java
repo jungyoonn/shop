@@ -40,7 +40,7 @@ public class ProductService {
         }, "존재하지 않는 코드입니다");
         int categoryId = findByCodeId(categoryName);
 
-        DbCon.queryUpdate("INSERT INTO PRODUCT VALUES (" + id  + "," + name  + "," + price  + "," + manufacturer  + "," + categoryId + ", 1, SYSDATE");
+        DbCon.queryUpdate("INSERT INTO PRODUCT VALUES (" + id  + "," + name  + "," + price  + "," + manufacturer  + "," + categoryId + ", 1, SYSDATE)");
     }
 
     /**
