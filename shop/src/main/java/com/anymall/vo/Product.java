@@ -2,6 +2,11 @@ package com.anymall.vo;
 
 import java.sql.Date;
 
+import lombok.Builder;
+import lombok.Data;
+
+@Builder
+@Data
 public class Product {
     /**
      * 상품 아이디
