@@ -2,6 +2,10 @@ package com.anymall.vo;
 
 import java.sql.Date;
 
+import lombok.*;
+
+@Data
+@Builder
 public class Category {
     /**
      * 분류 아이디
