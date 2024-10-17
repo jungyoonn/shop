@@ -6,29 +6,29 @@ public class Product {
     /**
      * 상품 아이디
      */
-    int id;
+    private int id;
     /**
      * 상품 이름
      */
-    String name;
+    private String name;
     /**
      * 상품 가격
      */
-    String price;
+     private String price;
     /**
      * 제조사
      */
-    String manufacturer;
+     private String manufacturer;
     /**
      * 분류 아이디
      */
-    int categoryId;
+    private int categoryId;
     /**
      * 사용 여부
      */
-    boolean use;
+    private boolean use;
     /**
      * 생성 날짜
      */
-    Date createdDate;
+    private Date createdDate;
 }

@@ -6,21 +6,21 @@ public class Cart {
     /**
      * 상품 아이디
      */
-    int productId;
+    private int productId;
     /**
      * 회원 아이디
      */
-    String memberId;
+    private String memberId;
     /**
      * 담긴 양
      */
-    int amount;
+    private int amount;
     /**
      * 체크 여부
      */
-    boolean check;
+    private boolean check;
     /**
      * 담은 날짜
      */
-    Date createdDate;
+    private Date createdDate;
 }

@@ -6,29 +6,29 @@ public class OrderItem {
     /**
      * 주문서 아이디
      */
-    String id;
+    private String id;
     /**
      * 상품 아이디
      */
-    int productId;
+    private int productId;
     /**
      * 주문 수량
      */
-    int amount;
+    private int amount;
     /**
      * 상품 가격
      */
-    String price;
+    private String price;
     /**
      * 주문번호
      */
-    String orderNum;
+    private String orderNum;
     /**
      * 배송 상태
      */
-    String state;
+    private String state;
     /**
      * 주문 날짜
      */
-    Date createdDate;
+    private Date createdDate;
 }

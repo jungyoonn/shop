@@ -6,21 +6,21 @@ public class Category {
     /**
      * 분류 아이디
      */
-    int categoryId;
+    private int categoryId;
     /**
      * 분류명
      */
-    String categoryName;
+    private String categoryName;
     /**
      * 사용 여부
      */
-    boolean use;
+    private boolean use;
     /**
      * 상위 분류
      */
-    int above;
+    private int above;
     /**
      * 생성 날짜
      */
-    Date createdDate;
+    private Date createdDate;
 }
