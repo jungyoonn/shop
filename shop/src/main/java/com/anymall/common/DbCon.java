@@ -36,4 +36,8 @@ public class DbCon {
         rs = stmt.executeQuery(query);
         return rs;
     }
+
+    public static void queryUpdate(String query) throws SQLException {
+        stmt.executeUpdate(query);
+    }
 }
