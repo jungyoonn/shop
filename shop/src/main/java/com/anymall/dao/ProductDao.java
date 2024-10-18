@@ -37,5 +37,15 @@ public class ProductDao {
         int categoryId = categoryRepository.findByName(categoryName).getCategoryId();
 
         DbCon.queryUpdate("INSERT INTO PRODUCT VALUES (" + id  + "," + name  + "," + price  + "," + manufacturer  + "," + categoryId + ", 1, SYSDATE)");
+    
+        DbCon.closeDatabase();
+    }
+
+    public void update() throws SQLException {
+        DbCon.connectDatabase();
+
+        
+
+        DbCon.closeDatabase();
     }
 }

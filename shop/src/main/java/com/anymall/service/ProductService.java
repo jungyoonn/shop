@@ -10,4 +10,8 @@ public class ProductService {
     public void save() throws SQLException {
         productDao.create();
     }
+
+    public void update() throws SQLException {
+        
+    }
 }
