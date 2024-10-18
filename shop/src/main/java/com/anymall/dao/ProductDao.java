@@ -1,4 +1,4 @@
-package dao;
+package com.anymall.dao;
 
 import java.sql.SQLException;
 
