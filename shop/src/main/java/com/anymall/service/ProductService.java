@@ -12,6 +12,6 @@ public class ProductService {
     }
 
     public void update() throws SQLException {
-        
+        productDao.update();
     }
 }
