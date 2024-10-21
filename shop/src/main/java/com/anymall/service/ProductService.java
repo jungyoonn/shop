@@ -12,6 +12,10 @@ public class ProductService {
     }
 
     public void update() throws SQLException {
-        productDao.update();
+        
+    }
+
+    public void delete() throws SQLException {
+        productDao.delete();
     }
 }
