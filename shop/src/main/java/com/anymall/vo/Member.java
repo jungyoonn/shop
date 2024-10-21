@@ -1,10 +1,17 @@
 package com.anymall.vo;
 
-import java.util.Date;
+// import java.util.Date;
+import java.sql.Date;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class Member {
     /**
      * 회원 아이디
