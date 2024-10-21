@@ -9,6 +9,9 @@ public class ProductDao {
     private ProductRepository productRepository;
     private CategoryRepository categoryRepository;
 
+    /**
+     * 상품 추가
+     */
     public void create() throws SQLException {
         DbCon.connectDatabase();
 
@@ -41,6 +44,9 @@ public class ProductDao {
         DbCon.closeDatabase();
     }
 
+    /**
+     * 상품 정보 수정
+     */
     public void update() throws SQLException {
         DbCon.connectDatabase();
 
@@ -49,6 +55,9 @@ public class ProductDao {
         DbCon.closeDatabase();
     }
 
+    /**
+     * 상품 삭제
+     */
     public void delete() throws SQLException {
         DbCon.connectDatabase();
 
