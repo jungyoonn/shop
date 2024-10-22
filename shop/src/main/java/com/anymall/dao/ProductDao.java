@@ -62,10 +62,17 @@ public class ProductDao {
         DbCon.connectDatabase();
 
         String name = Utils.next("삭제할 상품의 이름을 입력해 주세요", String.class
-                            , s -> productRepository.findByName(s) != null, "올바른 이름을 입력해 주세요");
+                            , s -> {
+                                try {
+                                    return productRepository.findByName(s) != null;
+                                } catch (SQLException e) {
+                                    e.printStackTrace();
+                                }
+                                return false;
+                            }, "올바른 이름을 입력해 주세요");
         
-        System.out.println(name + " 상품을 정말 삭제하시겠습니까?")
-        int del = Utils.next("(1. 예  2. 아니오)", Integer.class, i -> i < 3 && i > 0, "1과 2만 입력해 주세요")
+        System.out.println(name + " 상품을 정말 삭제하시겠습니까?");
+        int del = Utils.next("(1. 예  2. 아니오)", Integer.class, i -> i < 3 && i > 0, "1과 2만 입력해 주세요");
         if(del == 2) {
             System.out.println("삭제를 취소하셨습니다");
             DbCon.closeDatabase();
