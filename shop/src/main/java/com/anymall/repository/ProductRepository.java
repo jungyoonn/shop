@@ -37,10 +37,10 @@ public class ProductRepository {
         DbCon.connectDatabase();
 
         rs = DbCon.query("SELECT NAME FROM PRODUCT WHERE NAME = '" + name + "'");
-        Product product = product.builder().name(rs.getString("name")).build();
+        Product product = Product.builder().name(rs.getString("name")).build();
 
         rs.close();
-        Dbcon.closeDatabase();
+        DbCon.closeDatabase();
 
         return product;
     }
